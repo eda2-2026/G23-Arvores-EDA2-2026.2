@@ -1,0 +1,43 @@
+"""Definição dos 12 níveis."""
+
+ALL_AVL = ["NONE", "LL", "RR", "LR", "RL"]
+ALL_RB_DEL = ["NONE", "PAINT", "D1", "D2", "D3", "D4"]
+
+LEVELS = [
+    dict(name="AVL 1 - Rotação ou não?", tree="AVL", op="insert", q="case",
+         allowed=["NONE", "LL", "RR"], n=(3, 5), rounds=5,
+         desc="Insira o valor e diga se há rotação e de qual lado (só casos simples)."),
+    dict(name="AVL 2 - Todas as rotações", tree="AVL", op="insert", q="case",
+         allowed=ALL_AVL, n=(4, 7), rounds=6,
+         desc="Agora aparecem também as rotações duplas."),
+    dict(name="AVL 3 - Caçando o desbalanceado", tree="AVL", op="insert", q="click",
+         allowed=None, n=(5, 8), rounds=6,
+         desc="A árvore mostra o estado SEM correção. Clique no nó que precisa de rotação."),
+    dict(name="AVL 4 - Árvore final", tree="AVL", op="insert", q="preorder",
+         allowed=None, n=(5, 8), rounds=5,
+         desc="Digite a pré-ordem da árvore depois da inserção e da rotação."),
+    dict(name="AVL 5 - Remoção", tree="AVL", op="delete", q="case",
+         allowed=ALL_AVL, n=(5, 9), rounds=6,
+         desc="Remova o valor e diga qual a primeira rotação necessária."),
+    dict(name="AVL 6 - Remoção, árvore final", tree="AVL", op="delete", q="preorder",
+         allowed=None, n=(5, 9), rounds=5,
+         desc="Digite a pré-ordem da árvore depois da remoção (sucessor = menor da direita)."),
+    dict(name="RN 1 - Cores na inserção", tree="RB", op="insert", q="case",
+         allowed=["NONE", "RECOLOR"], n=(3, 6), rounds=5,
+         desc="Pai preto ou tio vermelho? Descubra o que acontece."),
+    dict(name="RN 2 - Rotações na inserção", tree="RB", op="insert", q="case",
+         allowed=["NONE", "RECOLOR", "SINGLE", "DOUBLE"], n=(4, 8), rounds=6,
+         desc="Agora entram as rotações simples e duplas."),
+    dict(name="RN 3 - Árvore colorida", tree="RB", op="insert", q="preorder",
+         allowed=None, n=(4, 8), rounds=5,
+         desc="Digite a pré-ordem com cores após a inserção. Nó vermelho leva 'v' (ex: 10 5v 20v)."),
+    dict(name="RN 4 - Remoção", tree="RB", op="delete", q="case",
+         allowed=ALL_RB_DEL, n=(5, 9), rounds=6,
+         desc="Remoção na Rubro-Negra: identifique o primeiro caso de correção."),
+    dict(name="RN 5 - Remoção colorida", tree="RB", op="delete", q="preorder",
+         allowed=None, n=(5, 9), rounds=5,
+         desc="Pré-ordem com cores depois da remoção. Nó vermelho leva 'v'."),
+    dict(name="CHEFÃO - Mestre das Árvores", tree="MIX", op="MIX", q="MIX",
+         allowed=None, n=(6, 10), rounds=10,
+         desc="AVL e Rubro-Negra, inserção e remoção, todos os tipos de pergunta."),
+]
