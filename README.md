@@ -75,7 +75,7 @@ O projeto implementa duas árvores binárias de busca auto-balanceadas, ambas re
 ## Vídeo Demonstrativo
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=jCYyG6SnK8E" target="_blank">
-    <img src="https://img.youtube.com/vi/jCYyG6SnK8E/maxresdefault.jpg" alt="Assistir vídeo de demonstração no YouTube" width="100%">
+  <a href="https://www.youtube.com/watch?v=RsuQQGFl8jc" target="_blank">
+    <img src="https://img.youtube.com/vi/RsuQQGFl8jc/maxresdefault.jpg" alt="Assistir vídeo de demonstração no YouTube" width="100%">
   </a>
 </p>
